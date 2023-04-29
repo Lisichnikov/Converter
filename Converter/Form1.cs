@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Converter
 {
     public partial class Конвертер : Form
@@ -91,6 +93,31 @@ namespace Converter
             if (radioButton4.Checked && radioButton6.Checked)
             {
                 textBox2.Text = $"{a}";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string text = textBox2.Text;
+            SaveFileDialog open = new SaveFileDialog();
+
+            open.ShowDialog();
+
+            string path = open.FileName;
+
+            try
+            {
+
+                using (FileStream fs = File.Create(path))
+                {
+                    byte[] info = new UTF8Encoding(true).GetBytes(text);
+                    fs.Write(info, 0, info.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
             }
         }
     }

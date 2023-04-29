@@ -43,6 +43,7 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -218,21 +219,37 @@
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gilroy SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Gilroy ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button1.Location = new System.Drawing.Point(22, 293);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(389, 40);
+            this.button1.Size = new System.Drawing.Size(162, 40);
             this.button1.TabIndex = 9;
             this.button1.Text = "Посчитать";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Gilroy Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.Location = new System.Drawing.Point(246, 293);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 40);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Вывести в файл";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Конвертер
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 356);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -267,5 +284,6 @@
         private RadioButton radioButton7;
         private Label label1;
         private Button button1;
+        private Button button2;
     }
 }
